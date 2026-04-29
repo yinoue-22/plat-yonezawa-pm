@@ -1,3 +1,6 @@
+了解しました。今後は index.html の内容だけ出力します。
+
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -69,6 +72,19 @@ body { font-family:'Noto Sans JP',sans-serif; background:var(--bg); color:var(--
   font-size:.95rem; font-weight:700; color:var(--primary);
   margin-bottom:1rem; padding-bottom:.4rem; border-bottom:2px solid var(--primary);
 }
+.subsection-title {
+  font-size:.85rem; font-weight:700; color:var(--primary);
+  margin: 1.2rem 0 .6rem;
+  padding-left: .6rem;
+  border-left: 3px solid var(--primary);
+}
+.subsection-title.rekimachi { border-left-color: var(--orange); }
+.pjt-num {
+  display:inline-block; background:var(--primary); color:#fff;
+  width:1.5rem; height:1.5rem; border-radius:50%; text-align:center; line-height:1.5rem;
+  font-weight:900; font-size:.78rem; margin-right:.4rem;
+}
+.pjt-num.rekimachi { background:var(--orange); }
 
 .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:.8rem; margin-bottom:1rem; }
 @media(max-width:640px){ .stats-row{ grid-template-columns:repeat(2,1fr); } }
@@ -197,6 +213,15 @@ body { font-family:'Noto Sans JP',sans-serif; background:var(--bg); color:var(--
 .pjt-card h4 { font-size:.95rem; font-weight:700; color:var(--primary); margin-bottom:.3rem; }
 .pjt-card .pjt-meta { font-size:.72rem; color:var(--text-sub); margin-bottom:.5rem; }
 .pjt-card .pjt-desc { font-size:.8rem; color:var(--text); line-height:1.55; }
+.pjt-card ul { margin:.4rem 0 0; padding-left:1.1rem; font-size:.78rem; color:var(--text); line-height:1.65; }
+.pjt-card.secondary h4 { color:var(--orange); }
+
+.concept-inline {
+  margin-top:1rem; padding:.8rem; background:#f8f9fa; border-radius:8px; border-left:3px solid var(--primary);
+}
+.concept-inline .concept-title {
+  font-size:.78rem; font-weight:700; color:var(--primary); margin-bottom:.5rem;
+}
 
 footer { text-align:center; padding:1.5rem; font-size:.73rem; color:var(--text-sub); border-top:1px solid var(--border); margin-top:1rem; }
 footer a { color:var(--text-sub); }
@@ -209,9 +234,9 @@ footer a { color:var(--text-sub); }
     <a href="../../index.html">個社PMポータル</a> ＞ 網代建設
   </div>
   <div class="project-label">プラットヨネザワ × 網代建設 ｜ 個社PM管理</div>
-  <div class="phase-badge">🏗 基本構想・設計フェーズ</div>
+  <div class="phase-badge">🏗 4PJT並行進行中</div>
   <h1>株式会社網代建設</h1>
-  <div class="subtitle">新社屋プロジェクト（メイン）＋レキマチハード連携／補助金活用：中小企業新事業進出補助金、農山漁村振興交付金</div>
+  <div class="subtitle">①新社屋プロジェクト ＋ レキマチハード3案件（②東町ポケットパーク／③粡町ポケットパーク／④マチスタヂオ）</div>
   <div class="meta">
     <span>📌 業種: 建設業</span>
     <span>👤 PM: プラットヨネザワ</span>
@@ -261,51 +286,151 @@ footer a { color:var(--text-sub); }
 
   <div class="card">
     <div class="section-title">🏗 関連プロジェクト</div>
+
+    <h4 class="subsection-title"><span class="pjt-num">①</span>新社屋プロジェクト（メイン）</h4>
+    <div class="pjt-card primary">
+      <div class="pjt-meta">基本構想・設計フェーズ ／ 進捗 約35% ／ 完成目標 2028年3月（外構含む）</div>
+      <div class="pjt-desc">
+        地域交流拠点としての新社屋建築事業。「単なる社屋を超えた、まちづくりの拠点」を基本理念に、働く場・学び（リクルート）・食（地域開放）の3軸で計画。事業総額 約3億円（補助金含）。坪単価100万×230坪。
+      </div>
+      <div class="concept-inline">
+        <div class="concept-title">🎯 新社屋プロジェクト コンセプト</div>
+        <div class="kpi-row">
+          <div class="kpi-item">
+            <div class="kpi-val">働く</div>
+            <div class="kpi-label">社員のワークスペース・<br>創造的な仕事環境</div>
+          </div>
+          <div class="kpi-item">
+            <div class="kpi-val">学び</div>
+            <div class="kpi-label">隣接高校との連携・<br>建築/まちづくり魅力発信</div>
+          </div>
+          <div class="kpi-item">
+            <div class="kpi-val">食</div>
+            <div class="kpi-label">地域住民・農家が<br>日常的に集える拠点</div>
+          </div>
+        </div>
+        <p style="margin-top:.6rem; font-size:.74rem; color:var(--text-sub);">基本理念：<strong>「単なる社屋を超えた、まちづくりの拠点」</strong> ／ 上郷地区の日常に寄り添う「持続可能な公共性」。</p>
+      </div>
+    </div>
+
+    <h4 class="subsection-title rekimachi">レキマチハード事業（観光振興事業費補助金）／（株）アジリノ間接事業者として申請中</h4>
+
     <div class="pjt-row">
-      <div class="pjt-card primary">
-        <h4>新社屋プロジェクト（メイン）</h4>
-        <div class="pjt-meta">基本構想・設計フェーズ ／ 進捗 約35%</div>
+      <div class="pjt-card secondary">
+        <h4><span class="pjt-num rekimachi">②</span>東町ポケットパーク</h4>
+        <div class="pjt-meta">観光庁提出済（2026/4/22）／ 採択判定 2026年6月上旬予定</div>
         <div class="pjt-desc">
-          地域交流拠点としての新社屋建築事業。「単なる社屋を超えた、まちづくりの拠点」を基本理念に、働く場・学び（リクルート）・食（地域開放）の3軸で計画。事業総額 約3億円（補助金含）。坪単価100万×230坪。
+          東町エリアにコンテナハウス型の小規模拠点を整備。肉のすがいさんが営業予定。3〜4畳サイズで十分な仕様。シェアハウス1階リノベ案も並行検討中（採択結果次第でいずれかに集約）。
         </div>
       </div>
       <div class="pjt-card secondary">
-        <h4>レキマチハード連携</h4>
-        <div class="pjt-meta">見積・施工協力 ／ 進行中</div>
+        <h4><span class="pjt-num rekimachi">③</span>粡町ポケットパーク（旧白根澤邸隣接）</h4>
+        <div class="pjt-meta">観光庁提出済（2026/4/22）／ 採択判定 2026年6月上旬予定</div>
         <div class="pjt-desc">
-          レキマチハード事業（観光振興事業費補助金）における施工協力。<br>・東町ポケットパーク（コンテナハウス）<br>・福島屋（網代見積り出し）<br>・上杉神社授与所（見積4,000万）
+          粡町エリアの旧白根澤邸の隣接エリアを、歴史的まちなみ保全と観光活用の拠点として整備。白根澤邸の登録有形文化財登録目標と連動。地域の回遊性向上に寄与。
+        </div>
+      </div>
+      <div class="pjt-card secondary">
+        <h4><span class="pjt-num rekimachi">④</span>マチスタヂオ</h4>
+        <div class="pjt-meta">観光庁提出済（2026/4/22）／ 採択判定 2026年6月上旬予定</div>
+        <div class="pjt-desc">
+          築50年以上の旧納豆工場を活用したシェアオフィス1階の交流エリア整備。観光客の交流・休憩・情報発信スペースとして強化。フリーWi-Fi、多言語案内、地域回遊マップ。上杉神社〜東町〜山大をつなぐ中継拠点。
         </div>
       </div>
     </div>
   </div>
 
   <div class="card">
-    <div class="section-title">📈 フェーズ別進捗</div>
+    <div class="section-title">📈 PJT別フェーズ進捗</div>
 
+    <h4 class="subsection-title"><span class="pjt-num">①</span>新社屋プロジェクト</h4>
     <div class="progress-wrap">
       <div class="progress-label"><span>Phase 1: 構想・要件定義（社員意見・WS）</span><span>100%</span></div>
       <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
     </div>
-
     <div class="progress-wrap">
       <div class="progress-label"><span>Phase 2: 基本設計（増田さん月次提案）</span><span>40%</span></div>
       <div class="progress-bar"><div class="progress-fill fill-blue" style="width:40%"></div></div>
     </div>
-
     <div class="progress-wrap">
       <div class="progress-label"><span>Phase 3: 詳細設計・補助金申請（R9農山漁村）</span><span>15%</span></div>
       <div class="progress-bar"><div class="progress-fill fill-blue" style="width:15%"></div></div>
     </div>
-
     <div class="progress-wrap">
       <div class="progress-label"><span>Phase 4: 着工・建築（社屋）</span><span>0%</span></div>
       <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
     </div>
-
     <div class="progress-wrap">
       <div class="progress-label"><span>Phase 5: 外構・全体完成</span><span>0%</span></div>
       <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
     </div>
+
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">②</span>レキマチ — 東町ポケットパーク</h4>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>計画策定・見積取得</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>観光庁提出（2026/4/22）</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>審査対応・採択判定（〜6月上旬）</span><span>30%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-blue" style="width:30%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>交付申請・施工</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>完了報告</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
+    </div>
+
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">③</span>レキマチ — 粡町ポケットパーク</h4>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>計画策定・見積取得</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>観光庁提出（2026/4/22）</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>審査対応・採択判定（〜6月上旬）</span><span>30%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-blue" style="width:30%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>交付申請・施工</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>完了報告</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
+    </div>
+
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">④</span>レキマチ — マチスタヂオ</h4>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>計画策定・見積取得</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>観光庁提出（2026/4/22）</span><span>100%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-green" style="width:100%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>審査対応・採択判定（〜6月上旬）</span><span>30%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-blue" style="width:30%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>交付申請・施工</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label"><span>完了報告</span><span>0%</span></div>
+      <div class="progress-bar"><div class="progress-fill fill-gray" style="width:0%"></div></div>
+    </div>
+
   </div>
 
   <div class="card">
@@ -336,7 +461,7 @@ footer a { color:var(--text-sub); }
         <div class="avatar" style="background:#6b21a8;">増</div>
         <div>
           <div class="team-name">増田 氏</div>
-          <div class="team-role">建築設計・主担当／月次（5/6/7月）来米して提案</div>
+          <div class="team-role">建築設計・主担当（新社屋PJT）／月次（5/6/7月）来米して提案</div>
         </div>
       </div>
       <div class="team-card">
@@ -356,25 +481,6 @@ footer a { color:var(--text-sub); }
     </div>
   </div>
 
-  <div class="card">
-    <div class="section-title">🎯 プロジェクトコンセプト</div>
-    <div class="kpi-row">
-      <div class="kpi-item">
-        <div class="kpi-val">働く</div>
-        <div class="kpi-label">社員のワークスペース・<br>創造的な仕事環境</div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-val">学び</div>
-        <div class="kpi-label">隣接高校との連携・<br>建築/まちづくり魅力発信</div>
-      </div>
-      <div class="kpi-item">
-        <div class="kpi-val">食</div>
-        <div class="kpi-label">地域住民・農家が<br>日常的に集える拠点</div>
-      </div>
-    </div>
-    <p style="margin-top:.8rem; font-size:.78rem; color:var(--text-sub);">基本理念：<strong>「単なる社屋を超えた、まちづくりの拠点」</strong> ／ 上郷地区の日常に寄り添う「持続可能な公共性」。</p>
-  </div>
-
   <div class="contact-box">
     <h4>📞 PM コンタクト</h4>
     プラットヨネザワ株式会社（個社PM担当）
@@ -386,144 +492,219 @@ footer a { color:var(--text-sub); }
 <div id="tab-milestones" class="tab-pane">
 
   <div class="card">
-    <div class="section-title">🎯 マイルストーン（過去〜未来）</div>
+    <h4 class="subsection-title"><span class="pjt-num">①</span>新社屋プロジェクト — マイルストーン</h4>
     <div class="timeline">
-
       <div class="tl-item">
         <div class="tl-dot done"></div>
         <div class="tl-date">2025/12/23</div>
         <div class="tl-title">✅ キックオフMTG — 社長との議論</div>
-        <div class="tl-desc">新社屋を「まちづくり拠点」として位置付け。プラットヨネザワをPMに依頼、アジリノ・増田氏の体制を合意。物件取得は2026/5月末予定。</div>
+        <div class="tl-desc">新社屋を「まちづくり拠点」として位置付け。プラットヨネザワをPMに依頼、アジリノ・増田氏の体制を合意。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot done"></div>
         <div class="tl-date">2026/01/18</div>
         <div class="tl-title">✅ 社内向け説明＋チーム編成</div>
         <div class="tl-desc">社員からの期待値高い反応。社員プロジェクトメンバー化の方針確定。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot done"></div>
         <div class="tl-date">2026/02/13</div>
         <div class="tl-title">✅ 増田さん来米／インタビュー結果共有</div>
-        <div class="tl-desc">網代会長／社長／安部社員代表のインタビュー実施・サマリ作成。スケジュール感共有。</div>
+        <div class="tl-desc">網代会長／社長／安部社員代表のインタビュー実施・サマリ作成。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot done"></div>
-        <div class="tl-date">2026/02/17</div>
-        <div class="tl-title">✅ 補助金スケジュール確認</div>
-        <div class="tl-desc">中小企業新事業進出補助金 R8（3/26〆）／農山漁村振興交付金 R9（1月下旬〜2月中旬申請）の整理。</div>
+        <div class="tl-date">2026/03/03〜</div>
+        <div class="tl-title">✅ ヒアリングボード設置・社員アンケート</div>
+        <div class="tl-desc">サウナ／喫煙所／屋上テラス／トレーニングルーム等の意見集約。</div>
       </div>
-
-      <div class="tl-item">
-        <div class="tl-dot done"></div>
-        <div class="tl-date">2026/03/03</div>
-        <div class="tl-title">✅ ヒアリングボード設置・社員アンケート開始</div>
-        <div class="tl-desc">紙＋QRで「新社屋で欲しい機能」収集。サウナ／喫煙所／屋上テラス／トレーニングルーム等の意見集約。</div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot done"></div>
-        <div class="tl-date">2026/04/03</div>
-        <div class="tl-title">✅ WS事前準備MTG</div>
-        <div class="tl-desc">タイムテーブル確定（4/10 16:00〜17:30）、5チーム編成、機材手配。</div>
-      </div>
-
       <div class="tl-item">
         <div class="tl-dot done"></div>
         <div class="tl-date">2026/04/10</div>
         <div class="tl-title">✅ ワークショップ実施＠網代建設オフィス</div>
-        <div class="tl-desc">22名参加。網代社長×増田さんトークセッション＋平面図ポストイットWS。意見集約完了。新年度会＠志ん柳も実施。</div>
+        <div class="tl-desc">22名参加。網代社長×増田さんトークセッション＋平面図ポストイットWS。</div>
         <div class="tl-who">運営：プラットヨネザワ＋アジリノ（安部氏）</div>
       </div>
-
-      <div class="tl-item">
-        <div class="tl-dot done"></div>
-        <div class="tl-date">2026/04/13</div>
-        <div class="tl-title">✅ WS振り返り／神社仏閣マップ作成</div>
-        <div class="tl-desc">WS意見まとめ、上郷地区の文脈整理、増田さんスケジュール調整方針。</div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot done"></div>
-        <div class="tl-date">2026/04/20</div>
-        <div class="tl-title">✅ 定例MTG — レキマチ＋新社屋の整理</div>
-        <div class="tl-desc">レキマチハード（東町ポケットパーク／福島屋／上杉神社）の整理。新社屋は増田さんから5・6・7月で月次提案する方針確定。</div>
-      </div>
-
       <div class="tl-item">
         <div class="tl-dot done"></div>
         <div class="tl-date">2026/04/27</div>
         <div class="tl-title">✅ 直近定例MTG — 5/2 MTG確定</div>
         <div class="tl-desc">増田さん5月対面MTG日程確定（5/2 9:30 マチスタ）。仙台視察（HARISO等）結果も共有。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot active"></div>
         <div class="tl-date">2026/05/02</div>
         <div class="tl-title">🔵 増田さんMTG＠マチスタ 9:30 — 5月の月次提案</div>
-        <div class="tl-desc">レキマチの進め方（補助金不採択時の対応含む）／新社屋の進め方（山登り・自転車での周辺フィールド再訪、交流スペース活用）／施工タイミングの大工・材料状況確認。</div>
-        <div class="tl-who">参加：増田氏／網代側／プラット</div>
+        <div class="tl-desc">レキマチの進め方／新社屋の進め方（山登り・自転車での周辺フィールド再訪、交流スペース活用）／施工タイミング協議。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot next"></div>
         <div class="tl-date">2026/06</div>
         <div class="tl-title">⏳ 6月の月次提案レビュー</div>
-        <div class="tl-desc">増田さんパース提案（第2弾）。模型・3Dの精度を上げる。地域・農家ヒアリングも並行。</div>
+        <div class="tl-desc">増田さんパース提案（第2弾）。模型・3Dの精度を上げる。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot next"></div>
         <div class="tl-date">2026/07</div>
-        <div class="tl-title">⏳ 7月の月次提案レビュー</div>
-        <div class="tl-desc">増田さんパース提案（第3弾）。基本設計のクロージングへ。</div>
+        <div class="tl-title">⏳ 7月の月次提案レビュー（基本設計クロージング）</div>
+        <div class="tl-desc">増田さんパース提案(第3弾)。基本設計を確定へ。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot next"></div>
         <div class="tl-date">2026/秋〜冬</div>
         <div class="tl-title">⏳ 詳細設計／既存建物処理判断</div>
-        <div class="tl-desc">取得地の蔵・鉄骨建物（アスベスト懸念）の解体時期判断。R9農山漁村振興交付金の申請準備。</div>
+        <div class="tl-desc">取得地の蔵・鉄骨建物（アスベスト懸念）の解体時期判断。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot future"></div>
         <div class="tl-date">2027/01〜02</div>
         <div class="tl-title">📅 R9 農山漁村振興交付金 申請</div>
         <div class="tl-desc">DMO農村推進・解散決議含むステークホルダー合意形成。金融機関承諾書取得。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot future"></div>
         <div class="tl-date">2027/03</div>
         <div class="tl-title">📅 社屋部分 着工（①②）</div>
         <div class="tl-desc">大工・材料確保前提。レキマチ施工と工期重なる想定で要調整。</div>
       </div>
-
-      <div class="tl-item">
-        <div class="tl-dot future"></div>
-        <div class="tl-date">2027/05</div>
-        <div class="tl-title">📅 外構（③）着工</div>
-        <div class="tl-desc">工期半年想定。県道拡張・県有地活用の交渉並行。</div>
-      </div>
-
       <div class="tl-item">
         <div class="tl-dot future"></div>
         <div class="tl-date">2027/06</div>
-        <div class="tl-title">📅 社屋部分（1階・2階）完成</div>
+        <div class="tl-title">📅 社屋部分 完成</div>
         <div class="tl-desc">①②引渡。1階パブリックスペース運用開始準備。</div>
       </div>
-
       <div class="tl-item">
         <div class="tl-dot future"></div>
         <div class="tl-date">2028/03</div>
         <div class="tl-title">📅 外構完成・全体引渡</div>
         <div class="tl-desc">プロジェクト全体完了。地域開放・運用フェーズへ。</div>
       </div>
+    </div>
+  </div>
 
+  <div class="card">
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">②</span>レキマチ — 東町ポケットパーク マイルストーン</h4>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-date">2026/03</div>
+        <div class="tl-title">✅ 計画策定・見積取得</div>
+        <div class="tl-desc">コンテナハウス型／3-4畳サイズ／肉のすがいさん営業前提で計画。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-date">2026/04/22</div>
+        <div class="tl-title">✅ 観光庁へ申請書類提出</div>
+        <div class="tl-desc">（株）アジリノが間接補助事業者として様式1〜5・経費積算・収支計画を提出済。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot active"></div>
+        <div class="tl-date">2026/04〜05</div>
+        <div class="tl-title">🔵 観光庁の審査対応</div>
+        <div class="tl-desc">追加資料・問合せに即応。シェアハウス1階リノベ案との取り下げ判断（採択結果次第）。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot next"></div>
+        <div class="tl-date">2026/06上旬</div>
+        <div class="tl-title">⏳ 採択判定</div>
+        <div class="tl-desc">採択時はコンテナハウス案／シェアハウス案のいずれかに集約。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot future"></div>
+        <div class="tl-date">2026/夏〜秋</div>
+        <div class="tl-title">📅 交付申請・施工準備</div>
+        <div class="tl-desc">施工業者選定／資材手配。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot future"></div>
+        <div class="tl-date">2026/秋〜2027</div>
+        <div class="tl-title">📅 施工・完了報告</div>
+        <div class="tl-desc">事業実施期間内（〜2027/2/26）に完了。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">③</span>レキマチ — 粡町ポケットパーク マイルストーン</h4>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-date">2026/03</div>
+        <div class="tl-title">✅ 計画策定・見積取得</div>
+        <div class="tl-desc">旧白根澤邸の隣接エリア整備計画。歴史的まちなみ保全との連動。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-date">2026/04/22</div>
+        <div class="tl-title">✅ 観光庁へ申請書類提出</div>
+        <div class="tl-desc">（株）アジリノが間接補助事業者として提出済。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot active"></div>
+        <div class="tl-date">2026/04〜05</div>
+        <div class="tl-title">🔵 観光庁の審査対応</div>
+        <div class="tl-desc">白根澤邸の登録有形文化財登録目標（5/13新山さん予定）と並走。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot next"></div>
+        <div class="tl-date">2026/06上旬</div>
+        <div class="tl-title">⏳ 採択判定</div>
+        <div class="tl-desc">採択結果通知後、施工計画を確定。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot future"></div>
+        <div class="tl-date">2026/夏〜秋</div>
+        <div class="tl-title">📅 交付申請・施工準備</div>
+        <div class="tl-desc">白根澤邸との一体的な動線設計を確定。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot future"></div>
+        <div class="tl-date">2026/秋〜2027</div>
+        <div class="tl-title">📅 施工・完了報告</div>
+        <div class="tl-desc">事業実施期間内（〜2027/2/26）に完了。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">④</span>レキマチ — マチスタヂオ マイルストーン</h4>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-date">2026/03</div>
+        <div class="tl-title">✅ 計画策定・見積取得</div>
+        <div class="tl-desc">旧納豆工場活用シェアオフィス1階の交流エリア整備計画。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot done"></div>
+        <div class="tl-date">2026/04/22</div>
+        <div class="tl-title">✅ 観光庁へ申請書類提出</div>
+        <div class="tl-desc">（株）アジリノが間接補助事業者として提出済。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot active"></div>
+        <div class="tl-date">2026/04〜05</div>
+        <div class="tl-title">🔵 観光庁の審査対応</div>
+        <div class="tl-desc">フリーWi-Fi／多言語案内／地域回遊マップ整備の詳細詰め。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot next"></div>
+        <div class="tl-date">2026/06上旬</div>
+        <div class="tl-title">⏳ 採択判定</div>
+        <div class="tl-desc">上杉神社〜東町〜山大の中継拠点としての位置付けを確認。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot future"></div>
+        <div class="tl-date">2026/夏〜秋</div>
+        <div class="tl-title">📅 交付申請・施工準備</div>
+        <div class="tl-desc">交流エリア機能設計・運用ルール整備。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot future"></div>
+        <div class="tl-date">2026/秋〜2027</div>
+        <div class="tl-title">📅 施工・完了報告</div>
+        <div class="tl-desc">事業実施期間内（〜2027/2/26）に完了。</div>
+      </div>
     </div>
   </div>
 
@@ -537,7 +718,7 @@ footer a { color:var(--text-sub); }
   </div>
 
   <div class="card">
-    <div class="section-title">🏗 新社屋PJT — 設計フェーズ</div>
+    <h4 class="subsection-title"><span class="pjt-num">①</span>新社屋プロジェクト — タスク</h4>
     <table class="task-table">
       <thead>
         <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
@@ -571,6 +752,13 @@ footer a { color:var(--text-sub); }
           <td><span class="deadline ok">7月中</span></td>
           <td><span class="badge badge-next">次の予定</span></td>
         </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">既存建物（蔵・鉄骨）解体時期判断・アスベスト調査</span></td>
+          <td><span class="tag tag-both">合同</span></td>
+          <td><span class="deadline ok">秋頃</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
         <tr class="task-done">
           <td><span class="check-circle done">✓</span></td>
           <td><span class="task-name">4/10 ワークショップ実施</span></td>
@@ -597,7 +785,7 @@ footer a { color:var(--text-sub); }
   </div>
 
   <div class="card">
-    <div class="section-title">💰 補助金・金融機関</div>
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">②</span>レキマチ — 東町ポケットパーク タスク</h4>
     <table class="task-table">
       <thead>
         <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
@@ -605,16 +793,154 @@ footer a { color:var(--text-sub); }
       <tbody>
         <tr>
           <td><span class="check-circle active">●</span></td>
-          <td><span class="task-name"><strong>農山漁村振興交付金 R9 準備</strong></span></td>
+          <td><span class="task-name"><strong>シェアハウス1階リノベ案との取り下げ判断</strong></span></td>
+          <td><span class="tag tag-rekimachi">レキマチ</span></td>
+          <td><span class="deadline soon">5/2 議論</span></td>
+          <td><span class="badge badge-active">対応中</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle active">●</span></td>
+          <td><span class="task-name">観光庁問合せ対応窓口の整備</span></td>
+          <td><span class="tag tag-plat">プラット</span></td>
+          <td><span class="deadline ok">継続</span></td>
+          <td><span class="badge badge-active">対応中</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">採択判定通知（6月上旬）受領</span></td>
+          <td><span class="tag tag-ext">観光庁</span></td>
+          <td><span class="deadline ok">6月上旬</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">交付申請書作成・提出</span></td>
+          <td><span class="tag tag-ajiro">網代</span></td>
+          <td><span class="deadline ok">採択後</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr class="task-done">
+          <td><span class="check-circle done">✓</span></td>
+          <td><span class="task-name">様式1〜5・見積・収支計画 観光庁提出</span></td>
+          <td><span class="tag tag-rekimachi">レキマチ</span></td>
+          <td><span class="deadline ok">4/22 完了</span></td>
+          <td><span class="badge badge-done">完了</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">③</span>レキマチ — 粡町ポケットパーク タスク</h4>
+    <table class="task-table">
+      <thead>
+        <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="check-circle active">●</span></td>
+          <td><span class="task-name">白根澤邸 登録有形文化財登録手続き並走</span></td>
+          <td><span class="tag tag-plat">プラット</span></td>
+          <td><span class="deadline soon">5/13 新山さん予定</span></td>
+          <td><span class="badge badge-active">対応中</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle active">●</span></td>
+          <td><span class="task-name">観光庁問合せ対応窓口の整備</span></td>
+          <td><span class="tag tag-plat">プラット</span></td>
+          <td><span class="deadline ok">継続</span></td>
+          <td><span class="badge badge-active">対応中</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">採択判定通知（6月上旬）受領</span></td>
+          <td><span class="tag tag-ext">観光庁</span></td>
+          <td><span class="deadline ok">6月上旬</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">白根澤邸との一体的動線設計</span></td>
+          <td><span class="tag tag-both">合同</span></td>
+          <td><span class="deadline ok">採択後</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr class="task-done">
+          <td><span class="check-circle done">✓</span></td>
+          <td><span class="task-name">様式1〜5・見積・収支計画 観光庁提出</span></td>
+          <td><span class="tag tag-rekimachi">レキマチ</span></td>
+          <td><span class="deadline ok">4/22 完了</span></td>
+          <td><span class="badge badge-done">完了</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">④</span>レキマチ — マチスタヂオ タスク</h4>
+    <table class="task-table">
+      <thead>
+        <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="check-circle active">●</span></td>
+          <td><span class="task-name">観光庁問合せ対応窓口の整備</span></td>
+          <td><span class="tag tag-plat">プラット</span></td>
+          <td><span class="deadline ok">継続</span></td>
+          <td><span class="badge badge-active">対応中</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">採択判定通知（6月上旬）受領</span></td>
+          <td><span class="tag tag-ext">観光庁</span></td>
+          <td><span class="deadline ok">6月上旬</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">交流エリア機能設計・運用ルール整備</span></td>
+          <td><span class="tag tag-both">合同</span></td>
+          <td><span class="deadline ok">採択後</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr>
+          <td><span class="check-circle next">○</span></td>
+          <td><span class="task-name">フリーWi-Fi／多言語案内の手配</span></td>
+          <td><span class="tag tag-ajiro">網代</span></td>
+          <td><span class="deadline ok">施工時</span></td>
+          <td><span class="badge badge-next">次の予定</span></td>
+        </tr>
+        <tr class="task-done">
+          <td><span class="check-circle done">✓</span></td>
+          <td><span class="task-name">様式1〜5・見積・収支計画 観光庁提出</span></td>
+          <td><span class="tag tag-rekimachi">レキマチ</span></td>
+          <td><span class="deadline ok">4/22 完了</span></td>
+          <td><span class="badge badge-done">完了</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="section-title">💰 補助金・金融機関（横断）</div>
+    <table class="task-table">
+      <thead>
+        <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="check-circle active">●</span></td>
+          <td><span class="task-name"><strong>農山漁村振興交付金 R9 準備（新社屋PJT用）</strong></span></td>
           <td><span class="tag tag-plat">プラット</span></td>
           <td><span class="deadline soon">2027/1〜2 申請</span></td>
           <td><span class="badge badge-active">対応中</span></td>
         </tr>
         <tr>
           <td><span class="check-circle active">●</span></td>
-          <td><span class="task-name">中小企業新事業進出補助金（活用可否再検討）</span></td>
+          <td><span class="task-name">中小企業新事業進出補助金 活用可否再検討</span></td>
           <td><span class="tag tag-plat">プラット</span></td>
-          <td><span class="deadline ok">継続検討</span></td>
+          <td><span class="deadline ok">継続</span></td>
           <td><span class="badge badge-active">対応中</span></td>
         </tr>
         <tr>
@@ -643,46 +969,7 @@ footer a { color:var(--text-sub); }
   </div>
 
   <div class="card">
-    <div class="section-title">🏛 レキマチハード連携（網代建設の施工協力）</div>
-    <table class="task-table">
-      <thead>
-        <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="check-circle active">●</span></td>
-          <td><span class="task-name">東町ポケットパーク／肉のすがい 見積調整</span></td>
-          <td><span class="tag tag-rekimachi">レキマチ</span></td>
-          <td><span class="deadline soon">5/2 議論</span></td>
-          <td><span class="badge badge-active">対応中</span></td>
-        </tr>
-        <tr>
-          <td><span class="check-circle active">●</span></td>
-          <td><span class="task-name">福島屋 見積（網代さん出し）確認</span></td>
-          <td><span class="tag tag-ajiro">網代</span></td>
-          <td><span class="deadline soon">5/2 議論</span></td>
-          <td><span class="badge badge-active">対応中</span></td>
-        </tr>
-        <tr>
-          <td><span class="check-circle active">●</span></td>
-          <td><span class="task-name">上杉神社授与所 見積（4,000万）／企画書</span></td>
-          <td><span class="tag tag-ajiro">網代</span></td>
-          <td><span class="deadline soon">5/2 議論</span></td>
-          <td><span class="badge badge-active">対応中</span></td>
-        </tr>
-        <tr>
-          <td><span class="check-circle next">○</span></td>
-          <td><span class="task-name">レキマチ採択判定後の施工準備</span></td>
-          <td><span class="tag tag-ajiro">網代</span></td>
-          <td><span class="deadline ok">6月上旬以降</span></td>
-          <td><span class="badge badge-next">次の予定</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="card">
-    <div class="section-title">🌾 地域連携・周辺リサーチ</div>
+    <div class="section-title">🌾 地域連携・周辺リサーチ（横断）</div>
     <table class="task-table">
       <thead>
         <tr><th style="width:32px;"></th><th>タスク</th><th style="width:90px;">担当</th><th style="width:100px;">期限</th><th style="width:90px;">状態</th></tr>
@@ -709,20 +996,6 @@ footer a { color:var(--text-sub); }
           <td><span class="deadline ok">今月中</span></td>
           <td><span class="badge badge-next">次の予定</span></td>
         </tr>
-        <tr>
-          <td><span class="check-circle next">○</span></td>
-          <td><span class="task-name">既存建物（蔵・鉄骨）解体時期判断</span></td>
-          <td><span class="tag tag-both">合同</span></td>
-          <td><span class="deadline ok">秋頃</span></td>
-          <td><span class="badge badge-next">次の予定</span></td>
-        </tr>
-        <tr>
-          <td><span class="check-circle next">○</span></td>
-          <td><span class="task-name">アスベスト含有調査</span></td>
-          <td><span class="tag tag-ajiro">網代</span></td>
-          <td><span class="deadline ok">解体前</span></td>
-          <td><span class="badge badge-next">次の予定</span></td>
-        </tr>
         <tr class="task-done">
           <td><span class="check-circle done">✓</span></td>
           <td><span class="task-name">上郷エリア フィールドワーク</span></td>
@@ -747,7 +1020,7 @@ footer a { color:var(--text-sub); }
 <div id="tab-deps" class="tab-pane">
 
   <div class="card">
-    <div class="section-title">🔗 クリティカルチェーン①：設計フェーズ</div>
+    <h4 class="subsection-title"><span class="pjt-num">①</span>新社屋プロジェクト — タイムライン</h4>
     <div class="dep-section">
       <div class="dep-label">設計プロセス</div>
       <div class="dep-chain">
@@ -766,12 +1039,9 @@ footer a { color:var(--text-sub); }
         増田さんの月次提案（5/6/7月の3回）のいずれかが遅れると、基本設計の確定が後ろ倒し。R9補助金申請（2027/1-2）に必要な図面が揃わず、補助金活用が困難になるリスク。
       </div>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="section-title">💰 クリティカルチェーン②：補助金・資金</div>
     <div class="dep-section">
-      <div class="dep-label">資金確保プロセス</div>
+      <div class="dep-label">補助金・資金プロセス</div>
       <div class="dep-chain">
         <div class="dep-node active">事業計画書<br>更新</div>
         <div class="dep-arrow">→</div>
@@ -788,12 +1058,9 @@ footer a { color:var(--text-sub); }
         中小企業新事業進出補助金は採択後14ヶ月以内事業完了の制約があり、社屋全体（外構含む2028/3完成）と工期が合わない可能性が高い。R9農山漁村振興交付金にシフトしているが、申請にはDMO解散決議など複数ステークホルダーの合意形成が必要。
       </div>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="section-title">🏗 クリティカルチェーン③：用地・既存建物</div>
     <div class="dep-section">
-      <div class="dep-label">用地準備プロセス</div>
+      <div class="dep-label">用地・既存建物プロセス</div>
       <div class="dep-chain">
         <div class="dep-node next">アスベスト<br>含有調査</div>
         <div class="dep-arrow">→</div>
@@ -805,15 +1072,15 @@ footer a { color:var(--text-sub); }
       </div>
       <div class="dep-warning">
         <strong>⚠ 遅延すると：</strong>
-        取得予定地の蔵・鉄骨建物のアスベスト含有調査と解体時期判断が遅れると、2027/3着工が困難になる。アスベスト対応は専門業者と工期が必要なため、遅くとも2026年秋までに方針確定が必要。
+        取得予定地の蔵・鉄骨建物のアスベスト含有調査と解体時期判断が遅れると、2027/3着工が困難。アスベスト対応は専門業者と工期が必要なため、遅くとも2026年秋までに方針確定が必要。
       </div>
     </div>
   </div>
 
   <div class="card">
-    <div class="section-title">🏛 クリティカルチェーン④：レキマチハード連携</div>
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">②</span>レキマチ — 東町ポケットパーク タイムライン</h4>
     <div class="dep-section">
-      <div class="dep-label">レキマチ施工協力プロセス</div>
+      <div class="dep-label">補助金〜施工プロセス</div>
       <div class="dep-chain">
         <div class="dep-node done">様式1〜5<br>提出済(4/22)</div>
         <div class="dep-arrow">→</div>
@@ -821,33 +1088,79 @@ footer a { color:var(--text-sub); }
         <div class="dep-arrow">→</div>
         <div class="dep-node next">採択判定<br>(6月上旬)</div>
         <div class="dep-arrow">→</div>
-        <div class="dep-node future">見積最終確定</div>
+        <div class="dep-node future">案集約判断<br>(コンテナ/シェアハウス)</div>
         <div class="dep-arrow">→</div>
-        <div class="dep-node future">レキマチ施工開始</div>
+        <div class="dep-node future">交付申請・施工</div>
       </div>
       <div class="dep-warning">
         <strong>⚠ 遅延すると：</strong>
-        レキマチ採択結果（6月上旬）が遅れる、または不採択の場合、東町ポケットパーク／福島屋／上杉神社の3案件の網代建設施工計画に影響。<strong>新社屋PJTの2027/3着工と工期が重なる想定</strong>のため、大工・材料の手配リソース競合を5/2 MTGで議論する必要。
+        採択判定が遅れる、または不採択の場合、肉のすがいさん営業計画に影響。コンテナハウス案／シェアハウス1階リノベ案のいずれを取り下げるかの判断が必要。<strong>新社屋PJTの2027/3着工と工期が重なる想定</strong>のため、大工・材料の手配リソース競合を5/2 MTGで議論。
       </div>
     </div>
   </div>
 
   <div class="card">
-    <div class="section-title">📅 クリティカルパス（完成までのルート）</div>
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">③</span>レキマチ — 粡町ポケットパーク タイムライン</h4>
+    <div class="dep-section">
+      <div class="dep-label">補助金〜施工プロセス</div>
+      <div class="dep-chain">
+        <div class="dep-node done">様式1〜5<br>提出済(4/22)</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node active">観光庁<br>審査対応</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node next">採択判定<br>(6月上旬)</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node future">白根澤邸との<br>一体動線設計</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node future">交付申請・施工</div>
+      </div>
+      <div class="dep-warning">
+        <strong>⚠ 遅延すると：</strong>
+        白根澤邸の登録有形文化財登録手続き（5/13新山さん予定）と並走しているため、どちらかが遅れると粡町エリアの全体設計が停滞。歴史的まちなみ保全と観光活用の動線設計に影響。
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4 class="subsection-title rekimachi"><span class="pjt-num rekimachi">④</span>レキマチ — マチスタヂオ タイムライン</h4>
+    <div class="dep-section">
+      <div class="dep-label">補助金〜施工プロセス</div>
+      <div class="dep-chain">
+        <div class="dep-node done">様式1〜5<br>提出済(4/22)</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node active">観光庁<br>審査対応</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node next">採択判定<br>(6月上旬)</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node future">交流エリア<br>機能設計</div>
+        <div class="dep-arrow">→</div>
+        <div class="dep-node future">交付申請・施工</div>
+      </div>
+      <div class="dep-warning">
+        <strong>⚠ 遅延すると：</strong>
+        マチスタヂオは上杉神社〜東町〜山大の中継拠点として位置付け。施工が遅れるとレキマチ事業全体の回遊性向上効果が後ろ倒し。フリーWi-Fi／多言語案内の手配は採択後速やかに開始する必要。
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title">📅 全体スケジュール（4PJT統合）</div>
     <table class="task-table">
       <thead>
         <tr><th style="width:120px;">時期</th><th>マイルストーン</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>2026/05/02</strong></td><td>5/2 増田さんMTG（直近）</td></tr>
-        <tr><td>2026/05〜07</td><td>増田さん月次提案 ×3回 → 基本設計確定</td></tr>
-        <tr><td>2026/秋</td><td>既存建物処理判断・アスベスト調査</td></tr>
-        <tr><td>2026/秋〜冬</td><td>詳細設計・事業計画書更新・きらやか融資打診</td></tr>
-        <tr><td>2027/01〜02</td><td>R9 農山漁村振興交付金 申請</td></tr>
-        <tr><td>2027/03</td><td>社屋着工（①②）</td></tr>
-        <tr><td>2027/05</td><td>外構着工（③）</td></tr>
-        <tr><td>2027/06</td><td>社屋部分 完成</td></tr>
-        <tr><td><strong>2028/03</strong></td><td><strong>外構完成・全体引渡</strong></td></tr>
+        <tr><td><strong>2026/05/02</strong></td><td>5/2 増田さんMTG（新社屋＋レキマチ全案件議論）</td></tr>
+        <tr><td>2026/05〜07</td><td>新社屋PJT — 増田さん月次提案 ×3回 → 基本設計確定</td></tr>
+        <tr><td><strong>2026/06上旬</strong></td><td><strong>レキマチ3案件 採択判定</strong>（東町／粡町／マチスタヂオ）</td></tr>
+        <tr><td>2026/夏〜秋</td><td>レキマチ — 交付申請・施工準備（3案件並行）</td></tr>
+        <tr><td>2026/秋</td><td>新社屋PJT — 既存建物処理判断・アスベスト調査</td></tr>
+        <tr><td>2026/秋〜冬</td><td>新社屋PJT — 詳細設計・事業計画書更新・きらやか融資打診</td></tr>
+        <tr><td>2027/01〜02</td><td>新社屋PJT — R9 農山漁村振興交付金 申請</td></tr>
+        <tr><td><strong>2027/02/26</strong></td><td><strong>レキマチ3案件 事業完了期限</strong></td></tr>
+        <tr><td>2027/03</td><td>新社屋PJT — 社屋着工（①②）</td></tr>
+        <tr><td>2027/06</td><td>新社屋PJT — 社屋部分 完成</td></tr>
+        <tr><td><strong>2028/03</strong></td><td><strong>新社屋PJT — 外構完成・全体引渡</strong></td></tr>
       </tbody>
     </table>
   </div>
@@ -875,3 +1188,4 @@ function showTab(name, btn) {
 
 </body>
 </html>
+```
